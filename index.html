@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GxP Compliance AI Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧬 GxP Compliance AI Agent</h1>
+      <p class="subtitle">Expert in EU · USA · Japan · China · Australia regulations</p>
+      <div class="mode-tabs">
+        <button class="tab active" data-mode="general">General Query</button>
+        <button class="tab" data-mode="audit">Audit Report</button>
+        <button class="tab" data-mode="qms">QMS Gap Analysis</button>
+        <button class="tab" data-mode="compare">Regulatory Comparison</button>
+        <button class="tab" data-mode="develop">Develop QMS</button>
+      </div>
+    </header>
+    <div class="chat-box" id="chatBox">
+      <div class="message agent">
+        <strong>GxP Agent</strong>
+        <p>Hello! I am your GxP Compliance AI Agent, specialized in GMP, GCP, GLP, and GDP regulations across the EU, USA, Japan, China, and Australia. Select a mode above or ask me anything.</p>
+      </div>
+    </div>
+    <div class="input-area">
+      <textarea id="userInput" placeholder="Describe your facility, paste your SOP, or ask a compliance question..." rows="4"></textarea>
+      <button id="sendBtn" onclick="sendMessage()">Send ➤</button>
+    </div>
+    <p class="disclaimer">⚠️ For professional guidance only. Always verify with a qualified regulatory affairs specialist.</p>
+  </div>
+  <script src="agent.js"></script>
+</body>
+</html>
