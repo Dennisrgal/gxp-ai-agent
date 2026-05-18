@@ -93,10 +93,7 @@ async function sendMessage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-dangerous-direct-browser-access": "true"
-      },
+             },
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
         max_tokens: 2000,
@@ -106,7 +103,7 @@ async function sendMessage() {
     });
 
     const data = await response.json();
-    const agentReply = data.content[0].text;
+   const agentReply = data.content && data.content[0] ? data.content[0].text : JSON.stringify(data);
 
     conversationHistory.push({ role: "assistant", content: agentReply });
     addMessage("agent", agentReply);
