@@ -1,4 +1,4 @@
-const ANTHROPIC_API_KEY = "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";
+const ANTHROPIC_API_KEY = "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";
 
 const MODES = {
   general: "You are a GxP Compliance AI Agent. Answer the user's question with expert regulatory knowledge.",
